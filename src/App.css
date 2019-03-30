@@ -1,33 +1,100 @@
-.App {
-  text-align: center;
+h1,
+h2,
+h3,
+ul {
+  margin: 0.5em 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.errorMessage {
+  color: red;
+  font-style: italic;
+  font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/**
+ * Wrappers
+ */
+
+.app-wrapper {
+  margin: 20px auto;
+  padding: 15px;
+  width: calc(100vw - 20px);
+  max-width: 500px;
+  background-color: whitesmoke;
+}
+
+.container {
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.container--large {
+  padding: 10px 5px;
+}
+
+/**
+ * Profile
+ */
+
+.profile {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.profile__details {
+  list-style: none;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile__details li {
+  font-size: 11px;
+  font-weight: 300;
+  color: gray;
+}
+
+/**
+ * Transactions
+ */
+
+.transaction {
+  margin: 5px 0;
+  border-left-width: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction h4,
+.transaction h6 {
+  margin: 0.2em 0;
+}
+
+.transaction--credit {
+  border-color: #b0c5ff;
+}
+
+.transaction--debit {
+  border-color: #ff7979;
+}
+
+/**
+ * Forms
+ */
+
+form {
+  border: 1px solid;
+  padding: 5px;
+}
+
+label h5 {
+  margin: 0;
+}
+
+form button {
+  display: block;
+}
+
+.form--disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }
