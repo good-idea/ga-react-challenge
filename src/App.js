@@ -51,10 +51,10 @@ class App extends Component {
    * that will make a request to the credits endpoint when called. (same goes with 'debits')
    *
    * How could we apply a similar technique to the 3 fetch methods above?
-   * 
+   *
    * Most of our requests will be POST. `method = 'POST'` in the parameters gives us a default
    * value when nothing else is supplied.
-   * 
+   *
    * So, we can call makeRequest(data) from our Transaction components, or
    * makeRequest(data, "PATCH") from the Profile
    */
@@ -97,7 +97,7 @@ class App extends Component {
           type="credit"
           title="Your Credits"
           transactions={credits}
-          {/* Note how we are calling makeTransactionFn with an argument */}
+          /* Note how we are calling makeTransactionFn with an argument */
           makeTransaction={this.makeRequestFn('credits')}
         />
         <Transactions
